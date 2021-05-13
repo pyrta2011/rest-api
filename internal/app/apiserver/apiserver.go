@@ -1,12 +1,14 @@
 package apiserver
 
 type APIServer struct {
-
+	config *Config
 }
 
 // function return instance APIServer struct
-func New() *APIServer {
-	return &APIServer{}
+func New(config *Config) *APIServer {
+	return &APIServer{
+		config: config, // Initialization config file "toml" from config.go
+	}
 }
 
 
